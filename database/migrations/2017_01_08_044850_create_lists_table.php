@@ -18,7 +18,7 @@ class CreateListsTable extends Migration
             $table->text('name');
             $table->integer('user_id');
             $table->date('expiration');
-            $table->longtext('description');
+            $table->longtext('date(format)escription');
             $table->timestamps();
         });
     }
