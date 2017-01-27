@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 class ListController extends Controller
 {
     /**
@@ -22,7 +21,8 @@ class ListController extends Controller
      */
     public function index()
     {
-        //
+        $list1 = "hello";
+        return view('list.index',['list' => $list1]);
     }
 
     /**

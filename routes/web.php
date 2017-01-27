@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::resource('list','ListController');	
+Route::resource('list','ListController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

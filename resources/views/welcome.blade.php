@@ -1,5 +1,5 @@
 @extends("layouts.app")
-@section('cover')
+@section('content')
 <div class="wrapper">
     <div class="container">
       <div class="row">
@@ -7,15 +7,14 @@
           <div class="banner-text">
             <h2>Your<br><span>New Year's</span> <br>Nice Things <br><span> Jar</span></h2>
           </div>
-          <div class="overlay-detail text-center">
-              <a href="#about"><i class="fa fa-angle-down"></i></a>
-          </div>
+
+
         </div>
       </div>
       </div>
 </div>
 @stop
-@section('content')
+@section('content-2')
 <section id="about" class="section-padding wow fadeIn delay-05s">
     <div class="container">
       <div class="row">

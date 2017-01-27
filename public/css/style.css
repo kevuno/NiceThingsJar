@@ -41,14 +41,18 @@ a:hover, a:focus, a:active{
 Responsive media queries
 ************************************
 ***********************************/
-.login {
+.margin {
     margin-top: 12em;
 }
-.header {
+.content{
+    margin-top: 9em;
+}
+body {
     background: url('../img/bg-banner03.jpg') no-repeat fixed;
     background-size: cover;
-    min-height: 630px;
     position: relative;
+    background-color: RGBA(0, 0, 0, 0.67);
+    
 }
 .navbar-default {
     background-color: transparent;
@@ -84,17 +88,12 @@ Responsive media queries
     background: rgba(50,60,70, 0.9);
 }
 
-.bg-color{
-	background-color: RGBA(0, 0, 0, 0.67);
-	min-height: 650px;
-}
 .navbar-border{
 }
 .banner-text{
 	border-left: 5px solid #BE2525;
 	padding: 15px 40px;
 	color: #fff;
-	margin-top: 15em;
 }
 .banner-text h2, .banner-text p{
 	font-size: 40px;
@@ -110,7 +109,6 @@ Responsive media queries
 .overlay-detail a i {
     text-align: center;
     position: absolute;
-    bottom: -140px;
     font-size: 24px;
     color: #fff;
     width: 40px;
@@ -118,6 +116,8 @@ Responsive media queries
 	border: 1px solid #fff;
 	line-height: 40px;
 	border-radius: 50%;
+    margin-bottom: : 4em;
+    margin-top: : 4em;
 }
 .deco{
 	font-family: 'Satisfy', cursive;
@@ -243,32 +243,13 @@ footer {
     padding: 40px 0;
     background: #F2F3EB;
 }
-
-.footer a {
-    color: #BE2525;
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.footer__navigation li, .social-list li{
-	display: inline-block;
-}
-.contact-sec h2 {
-    font-size: 28px;
-    color: #fff;
-    font-weight: 600;
-    padding: 15px 0px;
-}
-.footer__navigation li a
-{
-	display: inline-block;
-	color: #767676;
-	font-weight: 600;
-	font-variant-ligatures: common-ligatures;
-	font-size: 1.2em;
-	line-height: 1.625em;
-	margin-top: 0;
-	margin-bottom: 1.625em;
-	padding-right: 10px;
-}
 .contact-sec p {
     color: #fff;
     font-size: 18px;

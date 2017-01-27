@@ -16,8 +16,7 @@
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()">
         
-        <div class="header">
-            <div class="bg-color">                
+        <div class="content">             
                 <header id="main-header">
                 <nav class="navbar navbar-default navbar-fixed-top">
                   <div class="container">
@@ -65,21 +64,17 @@
                 </nav>
                 </header>
                 
-            <div class="container">
-                @yield('cover')
-            </div>
-            </div>
-        </div>
-    </div>
-@yield('content')      
+              <div class="container margin">
+                  @yield('content')
+              </div>
+            </div>  
+@yield('content-2')      
   
-  
+  <div class="footer">
   <footer class="footer-2 text-center-xs bg--white">
     <div class="container">
-      <!--end row-->
       <div class="row">
-          <div class="col-md-6">
-              <div class="footer">
+          <div class="col-xs-6">
                   © Made by Kevin Bastian
                     <div class="credits">
                         <!-- 
@@ -88,11 +83,10 @@
                             Licensing information: https://bootstrapmade.com/license/
                             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Laura
                         -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
+                        Layout by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
                     </div>
-              </div>
           </div>
-          <div class="col-md-6 text-right">
+          <div class="col-xs-6-6 text-right">
               <ul class="social-list">
                   <li>
                       <a href="#">
