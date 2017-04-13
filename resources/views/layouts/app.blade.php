@@ -79,6 +79,12 @@
                 @yield('content')     
             </div>
         </main>
+        <!-- DIVIDER: SUPER IMPORTANT TO KEEP A NICE FOOTER -->
+        <hr class="between-sections">
+        <div class="row">
+        </div>
+        <!-- /DIVIDER -->
+
         <!--/.Main Layour-->
         <!--Footer: CTA, Social Media, Additional Info & Links-->
         <footer class="page-footer center-on-small-only footer">
