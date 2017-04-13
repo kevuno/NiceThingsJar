@@ -33,12 +33,12 @@
                 New Year's Jar
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="nav navbar-nav smooth-scroll mr-auto">
+                <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light" href="#home">Home</a>
+                        <a class="nav-link waves-effect waves-light" href="{{route('welcome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light" href="#best-features">How it works </a>
+                        <a class="nav-link waves-effect waves-light" href="www.google.com">How it works </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link waves-effect waves-light" href="#examples-of-use">Jars</a>
@@ -118,19 +118,21 @@
     
 
     <!-- SCRIPTS -->
-    
-    <!--Init WOW-->
-    <script>
-        new WOW().init();
-    </script>    
+       
     <!-- JQuery -->
     <script src="{{URL::asset('js/jquery-3.1.1.min.js')}}"></script>
     <!-- Tooltips -->
     <script src="{{URL::asset('js/tether.min.js')}}"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+    <!-- Cool animations -->
     <script src="{{URL::asset('js/wow.js')}}"></script>
-    <script src="{{URL::asset('js/mdb.min.js')}}"></script>
-        
+    <!-- MDB JavaScript -->
+    <script src="{{URL::asset('js/mdb.js')}}"></script>
+    
+    <!--Init WOW-->
+    <script>
+        new WOW().init();
+    </script>     
   </body>
 </html>
