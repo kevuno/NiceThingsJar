@@ -11,9 +11,15 @@
 |
 */
 
+/* Basic welcome and about routes */
+
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome');;
+})->name('welcome');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');;
 
 
 Route::resource('list','ListController');

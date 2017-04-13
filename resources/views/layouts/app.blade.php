@@ -25,7 +25,7 @@
 <body>
         <div class="page-container">
         <!--Navbar-->
-        <nav class="secondary-color-dark navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar">
+        <nav class="secondary-color-dark navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar wow fadeIn">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,7 +38,7 @@
                         <a class="nav-link waves-effect waves-light" href="{{route('welcome') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light" href="www.google.com">How it works </a>
+                        <a class="nav-link waves-effect waves-light" href="{{route('about') }}">How it works </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link waves-effect waves-light" href="#examples-of-use">Jars</a>
