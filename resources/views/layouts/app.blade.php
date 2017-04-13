@@ -31,7 +31,7 @@
         /* Navigation*/
 
         .top-nav-collapse {
-            background-color: #2E2E2E !important;
+            background-color: #AA66CC !important;
         }
         
         @media only screen and (max-width: 768px) {
@@ -81,61 +81,54 @@
 </head>
 
 <body>
-
-    <!--Navigation & Intro-->
-    <header>
-
-        <!--Navbar-->
-        <nav class="secondary-color-dark navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    New Year's Jar
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav navbar-nav smooth-scroll mr-auto">
+    <!--Navbar-->
+    <nav class="secondary-color-dark navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                New Year's Jar
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav smooth-scroll mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="#best-features">How it works </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="#examples-of-use">Jars</a>
+                    </li>
+                </ul>
+                <!--Display login options if visitor-->
+                <ul class="navbar-nav">
+                    @if (Auth::guest())                        
                         <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light" href="#home">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link waves-effect waves-light" href="{{ url('/login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light" href="#best-features">How it works </a>
+                            <a class="nav-link waves-effect waves-light" href="{{ url('/register') }}">Register</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link waves-effect waves-light" href="#examples-of-use">Jars</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        @if (Auth::guest())                        
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="{{ url('/login') }}">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="{{ url('/register') }}">Register</a>
-                            </li>
-                        @else
-                            <div class="dropdown">
-                                    <a href="#"  class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                               <h6 class="dropdown-header">Dropdown header</h6>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </div>
-                            </div>
-                        @endif
-                    </ul>
-                </div>
+                    @else
+                        <div class="dropdown">
+                                <a href="#"  class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                           <h6 class="dropdown-header">Dropdown header</h6>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                        </div>
+                    @endif
+                </ul>
             </div>
-        </nav>
-
-        <!--/.Navbar-->
-
-    </header>
-    <!--/Navigation & Intro-->
+        </div>
+    </nav>
+    <!--/.Navbar-->
 
     <!--Main layout-->
     <main>
@@ -149,33 +142,34 @@
             </div>
         </div>
     </main>
-        <!--Footer: CTA, Social Media, Additional Info & Links-->
-            <footer class="page-footer sticky center-on-small-only">
-                <!--Social buttons-->
-                <div class="social-section wow fadeIn" data-wow-delay="0.3s">
-                    <ul>
-                        <li><a href="https://www.facebook.com/mdbootstrap" target="_blank" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
-                        <li><a href="https://twitter.com/MDBootstrap" target="_blank" class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
-                        <li><a href="https://plus.google.com/u/0/+Mdbootstrap" target="_blank" class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
-                        <li><a href="https://www.linkedin.com/in/dawid-adach-97435534/pl" target="_blank" class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
-                        <li><a class="btn-floating btn-small btn-git"><i class="fa fa-github"> </i></a></li>
-                        <li><a href="https://pl.pinterest.com/materialdesignf/" target="_blank" class="btn-floating btn-small btn-pin"><i class="fa fa-pinterest"> </i></a></li>
-                        <li><a href="https://www.instagram.com/mdbootstrap/" target="_blank" class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
-                    </ul>
-                </div>
-                <!--/.Social buttons-->
 
-                <!--Copyright-->
-                <div class="footer-copyright">
-                    <div class="container-fluid">
-                        © 2015 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
+    <!--Footer: CTA, Social Media, Additional Info & Links-->
+    <footer class="page-footer sticky center-on-small-only">
+        <!--Social buttons-->
+        <div class="social-section wow fadeIn" data-wow-delay="0.3s">
+            <ul>
+                <li><a href="https://www.facebook.com/mdbootstrap" target="_blank" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"> </i></a></li>
+                <li><a href="https://twitter.com/MDBootstrap" target="_blank" class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
+                <li><a href="https://plus.google.com/u/0/+Mdbootstrap" target="_blank" class="btn-floating btn-small btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
+                <li><a href="https://www.linkedin.com/in/dawid-adach-97435534/pl" target="_blank" class="btn-floating btn-small btn-li"><i class="fa fa-linkedin"> </i></a></li>
+                <li><a class="btn-floating btn-small btn-git"><i class="fa fa-github"> </i></a></li>
+                <li><a href="https://pl.pinterest.com/materialdesignf/" target="_blank" class="btn-floating btn-small btn-pin"><i class="fa fa-pinterest"> </i></a></li>
+                <li><a href="https://www.instagram.com/mdbootstrap/" target="_blank" class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
+            </ul>
+        </div>
+        <!--/.Social buttons-->
 
-                    </div>
-                </div>
-                <!--/.Copyright-->
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2017 <a href="kevinbastian.me"> Kevin Bastian </a>
 
-            </footer>
-        <!--/.Footer: CTA, Social Media, Additional Info & Links-->
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer: CTA, Social Media, Additional Info & Links-->
     
 
     <!-- SCRIPTS -->
@@ -194,34 +188,8 @@
 
     <!--Google Maps-->
     <script src="http://maps.google.com/maps/api/js"></script>
-
-    <script>
-        function init_map() {
-
-            var var_location = new google.maps.LatLng(40.725118, -73.997699);
-
-            var var_mapoptions = {
-                center: var_location,
-
-                zoom: 14
-            };
-
-            var var_marker = new google.maps.Marker({
-                position: var_location,
-                map: var_map,
-                title: "New York"
-            });
-
-            var var_map = new google.maps.Map(document.getElementById("map-container"),
-                var_mapoptions);
-
-            var_marker.setMap(var_map);
-
-        }
-
-        google.maps.event.addDomListener(window, 'load', init_map);
-    </script>
     
+    <!--Init WOW-->
     <script>
         new WOW().init();
     </script>
