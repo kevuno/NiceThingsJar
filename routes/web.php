@@ -24,6 +24,8 @@ Route::get('/about', function () {
 
 Route::resource('list','ListController');
 
+Route::resource('journal','JournalEntryController');
+
 
 Auth::routes();
 

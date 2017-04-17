@@ -38,6 +38,9 @@
                         <a class="nav-link waves-effect waves-light" href="{{route('welcome') }}">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="{{route('journal.index') }}">Personal Journal</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link waves-effect waves-light" href="{{route('about') }}">How it works </a>
                     </li>
                     <li class="nav-item">
@@ -129,6 +132,8 @@
     <script src="{{URL::asset('js/wow.js')}}"></script>
     <!-- MDB JavaScript -->
     <script src="{{URL::asset('js/mdb.js')}}"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{URL::asset('js/custom.js')}}"></script>
     
     <!--Init WOW-->
     <script>
