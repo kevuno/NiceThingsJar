@@ -11,24 +11,41 @@
                 <h4>{{$time}}</h4>
                 <hr class="mt-2 mb-2">
             </div>
+            <form method="POST" action="{{route('journal.store')}}">
+                {{ csrf_field() }}
+                
+                <!--Body-->
+                <div class="md-form">
+                    <i class="fa fa-hand-peace-o prefix"></i>
+                    <input type="text" name="title" id="title" class="form-control">
+                    <label for="title">Title</label>
+                </div>
+                <br>
+                <div class="md-form">
+                    <div class="file-field">
+                        <div class="btn btn-primary btn-sm btn-file">
+                            <span>Dank image for the day</span>
+                            <input type="file" name="image_path" id="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                           <input class="file-path validate" type="text" placeholder="Select the image">
+                        </div>
+                        <img id='img-upload'/>
+                    </div>
+                </div>                
+                <br>
+                <br>
+                <div class="md-form">
+                    <i class="fa fa-wheelchair-alt prefix"></i>
+                    <textarea type="text" name="content" id="content" class="md-textarea journal-textarea"></textarea>
+                    <label for="content">Journal entry</label>
+                </div>
 
-            <!--Body-->
-            <div class="md-form">
-                <i class="fa fa-hand-peace-o prefix"></i>
-                <input type="text" id="form3" class="form-control">
-                <label for="form3">Title</label>
-            </div>
-            <br>
-            <div class="md-form">
-                <i class="fa fa-wheelchair-alt prefix"></i>
-                <textarea type="text" id="form2" class="md-textarea journal-textarea"></textarea>
-                <label for="form2">Journal entry</label>
-            </div>
 
-            <div class="text-center">
-                <button class="btn btn-deep-orange">Send</button>
-            </div>
-
+                <div class="text-center">
+                    <button type="submit" class="btn btn-deep-orange" value="Send"> Send </button>
+                </div>
+            </form>
         </div>
     </div>
     <!--/Form without header-->

@@ -39,6 +39,21 @@ class JournalEntryController extends Controller
     public function store(Request $request)
     {
         //
+        print_r( $request->all());
+        print_r( $request->all());
+        
+        JournalEntry::create($request->all() + ['user_id' => Auth::user()->id]);
+        $this->validate($request, [
+            'image_path' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = $request->image_path->getClientOriginalExtension();
+        $request->image->move(public_path('img/journal_img'), $imageName);
+        echo $imageName;
+        echo $request;
+        #return back()
+        #    ->with('success','Image Uploaded successfully.')
+        #    ->with('path',$imageName);
     }
 
     /**
