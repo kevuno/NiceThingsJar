@@ -11,7 +11,17 @@
                 <h4>{{$time}}</h4>
                 <hr class="mt-2 mb-2">
             </div>
-            <form method="POST" action="{{route('journal.store')}}">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form method="POST" action="{{route('journal.store')}}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 
                 <!--Body-->
@@ -25,7 +35,7 @@
                     <div class="file-field">
                         <div class="btn btn-primary btn-sm btn-file">
                             <span>Dank image for the day</span>
-                            <input type="file" name="image_path" id="image">
+                            <input type="file" name="image_path" id="image_path">
                         </div>
                         <div class="file-path-wrapper">
                            <input class="file-path validate" type="text" placeholder="Select the image">
