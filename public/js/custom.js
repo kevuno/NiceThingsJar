@@ -51,7 +51,7 @@ $(document).ready( function() {
             }
         }
 
-        $("#image").change(function(){
+        $("#image_path").change(function(){
             readURL(this);
         });     
     });
