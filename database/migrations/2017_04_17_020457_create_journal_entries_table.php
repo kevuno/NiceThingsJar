@@ -19,7 +19,7 @@ class CreateJournalEntriesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             //rest
-            $table->string('content');
+            $table->longText('content');
             $table->string('image_path')->nullable();;
             $table->increments('id');
             $table->timestamps();
