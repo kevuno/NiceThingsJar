@@ -8,6 +8,7 @@ use Carbon\Carbon;
 
 use App\JournalEntry;
 
+
 class JournalEntryController extends Controller
 {
     /**
@@ -17,7 +18,7 @@ class JournalEntryController extends Controller
      */
     public function index()
     {
-        return view('journal.index',['JournalEntries' => Auth::user()->journals()]);
+        return view('journal.index',['JournalEntries' => Auth::user()->journals->reverse()]);
     }
 
     /**
@@ -37,23 +38,27 @@ class JournalEntryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-        print_r( $request->all());
-        print_r( $request->all());
-        
-        JournalEntry::create($request->all() + ['user_id' => Auth::user()->id]);
-        $this->validate($request, [
-            'image_path' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+    {   
 
-        $imageName = $request->image_path->getClientOriginalExtension();
-        $request->image->move(public_path('img/journal_img'), $imageName);
-        echo $imageName;
-        echo $request;
-        #return back()
-        #    ->with('success','Image Uploaded successfully.')
-        #    ->with('path',$imageName);
+        print_r($request->image_path);
+
+        $entry = new JournalEntry();
+
+
+        $imageNameWithPath = Carbon::now()->format('Y-m-d H-M').'-'.$request->image_path->getClientOriginalName();
+        $request->image_path->move(public_path('img/journal_img'), $imageNameWithPath);
+
+        foreach($request->except(['_token','image_path']) as $key => $value){
+            $entry->setAttribute($key, $value);
+        }
+        $entry->user_id = Auth::user()->save();
+        $entry->image_path = $imageNameWithPath;
+        $entry->save();
+
+
+        return back()
+            ->with('success','Image Uploaded successfully.')
+            ->with('path',$imageNameWithPath);
     }
 
     /**
