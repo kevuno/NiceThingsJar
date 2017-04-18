@@ -15,6 +15,10 @@ class CreateJournalEntriesTable extends Migration
     {
         Schema::create('journal_entries', function (Blueprint $table) {
             $table->string('title');
+            //foreign key for users
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            //rest
             $table->string('content');
             $table->string('image_path')->nullable();;
             $table->increments('id');

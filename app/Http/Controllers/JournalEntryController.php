@@ -3,32 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;  
+
 use App\JournalEntry;
 
 class JournalEntryController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the journal.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('journal.index',['JournalEntries' => JournalEntry::all()]);
+        return view('journal.index',['JournalEntries' => Auth::user()->journals()]);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new journal.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('journal.create', ['time' => Carbon::now()->toDayDateTimeString()]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created journal in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,7 +42,7 @@ class JournalEntryController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified journal.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -50,7 +53,7 @@ class JournalEntryController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified journal.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -61,7 +64,7 @@ class JournalEntryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified journal in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -73,7 +76,7 @@ class JournalEntryController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified journal from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

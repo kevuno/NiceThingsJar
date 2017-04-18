@@ -58,6 +58,18 @@ main{
     }
 }
 
+
+/* Form for a Journal */
+
+.journal-textarea{
+    height: 450px !important; 
+}
+
+
+
+
+
+
 /*Footer*/
 
 .footer {

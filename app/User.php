@@ -10,6 +10,15 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * Get the journals for the user.
+     */
+    public function journals(){
+        return $this->hasMany('App\JournalEntry');
+    }
+
+
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array

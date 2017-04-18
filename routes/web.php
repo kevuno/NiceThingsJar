@@ -22,9 +22,14 @@ Route::get('/about', function () {
 })->name('about');;
 
 
-Route::resource('list','ListController');
+Route::group(['middleware' => ['auth']], function () {
+	
+	Route::resource('list','ListController');
+	Route::resource('journal','JournalEntryController');
 
-Route::resource('journal','JournalEntryController');
+
+});
+
 
 
 Auth::routes();
