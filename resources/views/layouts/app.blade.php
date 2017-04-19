@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
-    <link href="{{URL::asset('css/mdb.min.css')}}" rel="stylesheet">
+    <link href="/css/mdb.min.css" rel="stylesheet">
 
     <!-- Personalized styles -->
-    <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -123,17 +123,17 @@
     <!-- SCRIPTS -->
        
     <!-- JQuery -->
-    <script src="{{URL::asset('js/jquery-3.1.1.min.js')}}"></script>
+    <script src="/js/jquery-3.1.1.min.js"></script>
     <!-- Tooltips -->
-    <script src="{{URL::asset('js/tether.min.js')}}"></script>
+    <script src="/js/tether.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Cool animations -->
-    <script src="{{URL::asset('js/wow.js')}}"></script>
+    <script src="/js/wow.js"></script>
     <!-- MDB JavaScript -->
-    <script src="{{URL::asset('js/mdb.js')}}"></script>
+    <script src="/js/mdb.js"></script>
     <!-- Custom JavaScript -->
-    <script src="{{URL::asset('js/custom.js')}}"></script>
+    <script src="/js/custom.js"></script>
     
     <!--Init WOW-->
     <script>
