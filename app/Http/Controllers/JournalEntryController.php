@@ -56,7 +56,7 @@ class JournalEntryController extends Controller
         $entry->save();
 
 
-        return back()
+        return redirect()->route('journal.index')
             ->with('success','Image Uploaded successfully.')
             ->with('path',$imageNameWithPath);
     }

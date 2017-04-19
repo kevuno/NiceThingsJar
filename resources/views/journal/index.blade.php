@@ -1,5 +1,21 @@
 @extends("layouts.app")
 @section('content')
+	<div class="row">
+		<div class="col col-lg-6">
+			<a href="/journal/create">
+				<div class="chip">		    
+				    <i class="fa fa-plus prefix"></i>
+				    Add entry
+				</div>
+			</a>
+		</div>	
+	</div>
+    @if (!empty($data['success']))
+    YEI
+	    <div class="alert alert-success">
+	    	{{$success}}
+	    </div>
+	@endif
 	@foreach($JournalEntries as $entry)
 
 	<!--Card-->
