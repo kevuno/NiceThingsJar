@@ -131,7 +131,7 @@
     <!-- Cool animations -->
     <script src="{{URL::asset('js/wow.js')}}"></script>
     <!-- MDB JavaScript -->
-    <script src="{{URL::asset('js/mdb.js')}}"></script>
+    <script src="{{URL::asset('js/mdb.min.js')}}"></script>
     <!-- Custom JavaScript -->
     <script src="{{URL::asset('js/custom.js')}}"></script>
     
